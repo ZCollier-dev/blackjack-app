@@ -1,0 +1,243 @@
+[
+    {
+        "suit": "spades",
+        "cards": [
+            {
+                "name": "A",
+                "value": 1
+            },
+            {
+                "name": "02",
+                "value": 2
+            },
+            {
+                "name": "03",
+                "value": 3
+            },
+            {
+                "name": "04",
+                "value": 4
+            },
+            {
+                "name": "05",
+                "value": 5
+            },
+            {
+                "name": "06",
+                "value": 6
+            },
+            {
+                "name": "07",
+                "value": 7
+            },
+            {
+                "name": "08",
+                "value": 8
+            },
+            {
+                "name": "09",
+                "value": 9
+            },
+            {
+                "name": "10",
+                "value": 10
+            },
+            {
+                "name": "J",
+                "value": 11
+            },
+            {
+                "name": "Q",
+                "value": 12
+            },
+            {
+                "name": "K",
+                "value": 13
+            }
+        ]
+    },
+    {
+        "suit": "hearts",
+        "cards": [
+            {
+                "name": "A",
+                "value": 1
+            },
+            {
+                "name": "02",
+                "value": 2
+            },
+            {
+                "name": "03",
+                "value": 3
+            },
+            {
+                "name": "04",
+                "value": 4
+            },
+            {
+                "name": "05",
+                "value": 5
+            },
+            {
+                "name": "06",
+                "value": 6
+            },
+            {
+                "name": "07",
+                "value": 7
+            },
+            {
+                "name": "08",
+                "value": 8
+            },
+            {
+                "name": "09",
+                "value": 9
+            },
+            {
+                "name": "10",
+                "value": 10
+            },
+            {
+                "name": "J",
+                "value": 11
+            },
+            {
+                "name": "Q",
+                "value": 12
+            },
+            {
+                "name": "K",
+                "value": 13
+            }
+        ]
+    },
+    {
+        "suit": "diamonds",
+        "cards": [
+            {
+                "name": "A",
+                "value": 1
+            },
+            {
+                "name": "02",
+                "value": 2
+            },
+            {
+                "name": "03",
+                "value": 3
+            },
+            {
+                "name": "04",
+                "value": 4
+            },
+            {
+                "name": "05",
+                "value": 5
+            },
+            {
+                "name": "06",
+                "value": 6
+            },
+            {
+                "name": "07",
+                "value": 7
+            },
+            {
+                "name": "08",
+                "value": 8
+            },
+            {
+                "name": "09",
+                "value": 9
+            },
+            {
+                "name": "10",
+                "value": 10
+            },
+            {
+                "name": "J",
+                "value": 11
+            },
+            {
+                "name": "Q",
+                "value": 12
+            },
+            {
+                "name": "K",
+                "value": 13
+            }
+        ]
+    },
+    {
+        "suit": "clubs",
+        "cards": [
+            {
+                "name": "A",
+                "value": 1
+            },
+            {
+                "name": "02",
+                "value": 2
+            },
+            {
+                "name": "03",
+                "value": 3
+            },
+            {
+                "name": "04",
+                "value": 4
+            },
+            {
+                "name": "05",
+                "value": 5
+            },
+            {
+                "name": "06",
+                "value": 6
+            },
+            {
+                "name": "07",
+                "value": 7
+            },
+            {
+                "name": "08",
+                "value": 8
+            },
+            {
+                "name": "09",
+                "value": 9
+            },
+            {
+                "name": "10",
+                "value": 10
+            },
+            {
+                "name": "J",
+                "value": 11
+            },
+            {
+                "name": "Q",
+                "value": 12
+            },
+            {
+                "name": "K",
+                "value": 13
+            }
+        ]
+    },
+    {
+        "suit": "joker",
+        "cards": [
+            {
+                "name": "black",
+                "value": 0
+            },
+            {
+                "name": "red",
+                "value": 0
+            }
+        ]
+    }
+]
