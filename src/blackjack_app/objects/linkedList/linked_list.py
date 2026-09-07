@@ -3,14 +3,14 @@ from blackjack_app.objects.linkedList.node import Node
 # head - first node in chain
 
 class LinkedList:
-    def __init__(self, init_data=None):
+    def __init__(self, init_data=None) -> None:
         if init_data is None:
             self.head = None
         else:
             self.head = Node(init_data) # not the problem
         self.size = 0
 
-    def enqueue(self, data):
+    def enqueue(self, data) -> None:
         if self.head is None:
             self.head = Node(data)
         elif self.head.data is None:
@@ -20,7 +20,7 @@ class LinkedList:
 
         self.size += 1
 
-    def dequeue(self):
+    def dequeue(self) -> Node | bool:
         if self.head is not None and self.head.data is not None:
             data = self.head.data
             self.head = self.head.dequeue()
@@ -29,11 +29,11 @@ class LinkedList:
         else:
             return False
 
-    def clear(self):
+    def clear(self) -> None:
         self.head = None
         self.size = 0
 
-    def view(self):
+    def view(self) -> str:
         if self.head is not None and self.head.data is not None:
             return self.head.view()
         else:

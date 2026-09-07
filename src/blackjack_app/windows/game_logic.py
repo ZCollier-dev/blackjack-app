@@ -1,8 +1,9 @@
+from blackjack_app.objects.cards.card import Card
 from blackjack_app.objects.cards.deck import Deck
 
 
 class GameLogic: # handles most game logic
-    def __init__(self, app_dir):
+    def __init__(self, app_dir) -> None:
         self.app_dir = app_dir
         self.deck = Deck(self.app_dir)
         self.dealer_hand = [] # dealer or player cards
@@ -10,13 +11,13 @@ class GameLogic: # handles most game logic
         self.dealer_score = 0 # dealer or player total score
         self.player_score = 0
 
-    def resetGame(self):
+    def resetGame(self) -> None:
         self.dealer_hand = []
         self.player_hand = []
         self.dealer_score = 0
         self.player_score = 0
 
-    def cardDrawDealer(self):
+    def cardDrawDealer(self) -> Card:
         drawn_card = self.deck.draw_card()[0]
 
         drawn_card = self.checkDuplicateCard(drawn_card)
@@ -31,7 +32,7 @@ class GameLogic: # handles most game logic
 
         return drawn_card
 
-    def cardDrawPlayer(self):
+    def cardDrawPlayer(self) -> Card:
         drawn_card = self.deck.draw_card()[0]
 
         drawn_card = self.checkDuplicateCard(drawn_card)
@@ -46,27 +47,27 @@ class GameLogic: # handles most game logic
 
         return drawn_card
 
-    def calculateScore(self, hand): # calculates score of a hand
+    def calculateScore(self, hand) -> int: # calculates score of a hand
         score = 0
         for card in hand:
             score += card.value
         return score
 
-    def setFaceCardValue(self, card): # sets the value of jacks, queens, kings
+    def setFaceCardValue(self, card) -> Card: # sets the value of jacks, queens, kings
         card.value = min(card.value, 10)
         return card
 
-    def switchAceCardTo11(self, card): # sets the value of aces to 11. place after setFaceCardValue
+    def switchAceCardTo11(self, card) -> Card: # sets the value of aces to 11. place after setFaceCardValue
         if card.value == 1:
             card.value = 11
         return card
 
-    def switchAceCardTo1(self, card): # sets the value of aces to 1. only used in checkAbove21
+    def switchAceCardTo1(self, card) -> Card: # sets the value of aces to 1. only used in checkAbove21
         if card.value == 11:
             card.value = 1
         return card
 
-    def checkDuplicateCard(self, drawn_card): # checks for duplicate cards. draws another card if dupe exists. place first.
+    def checkDuplicateCard(self, drawn_card) -> Card: # checks for duplicate cards. draws another card if dupe exists. place first.
         for card in self.dealer_hand:
             if card.suit == drawn_card.suit and card.name == drawn_card.name:
                 return self.checkDuplicateCard(self.deck.draw_card()[0])
@@ -77,17 +78,17 @@ class GameLogic: # handles most game logic
 
         return drawn_card
 
-    def checkForAbove21(self, hand, score): # checks values for score above 21 and changes aces in hand.
+    def checkForAbove21(self, hand, score) -> list[Card]: # checks values for score above 21 and changes aces in hand.
         for card_num in range(len(hand)):
             if score > 21:
                 hand[card_num] = self.switchAceCardTo1(hand[card_num])
 
         return hand
 
-    def checkForBust(self, score): # checks values for score above 21. returns true if bust, false if not
+    def checkForBust(self, score) -> bool: # checks values for score above 21. returns true if bust, false if not
         return score > 21
 
-    def checkForWinner(self):
+    def checkForWinner(self) -> str:
         if self.dealer_score == self.player_score:
             return "Draw."
         elif self.dealer_score > self.player_score:
