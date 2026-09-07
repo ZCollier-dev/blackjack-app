@@ -13,7 +13,7 @@ from blackjack_app.objects.linkedList.linked_list import LinkedList
 # discard_pile - Linked List - Cards queued from drawn cards - Also includes cards in play
 
 class Deck:
-    def __init__(self, app_dir, has_jokers=False):
+    def __init__(self, app_dir, has_jokers=False) -> None:
         self.has_jokers = has_jokers
         self.deck_size = 0
         self.__app_dir = app_dir
@@ -38,7 +38,7 @@ class Deck:
             self.deck_size += len(suit["cards"])
         return initial_deck
 
-    def shuffle_deck(self): # clears the draw and discard piles, takes initial deck and distributes them into draw pile
+    def shuffle_deck(self) -> None: # clears the draw and discard piles, takes initial deck and distributes them into draw pile
         self.draw_pile.clear()
         self.discard_pile.clear()
 
@@ -63,7 +63,7 @@ class Deck:
 
         print("Deck shuffled.")
 
-    def draw_card(self, num_of_draws=1):
+    def draw_card(self, num_of_draws=1) -> list[Card]:
         drawn_cards = []
 
         for card_num in range(num_of_draws):
@@ -78,7 +78,7 @@ class Deck:
 
         return drawn_cards
 
-    def __str__(self):
+    def __str__(self) -> str:
 
         draw_pile = self.draw_pile.view().split(',')
         discard_pile = self.discard_pile.view().split(',')
